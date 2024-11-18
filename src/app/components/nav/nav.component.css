@@ -1,0 +1,185 @@
+/* NAV CONTENEDOR PRINCIPAL */
+nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    padding: 0 1rem;
+    background-color: var(--color-600);
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-600);
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* LOGO */
+.logo a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.menu-2 ul{
+    display: flex;
+    gap: 3.5rem;
+}
+
+.menu-2 ul li{
+    list-style: none;
+}
+
+.menu-2 ul li a{
+
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+/* MENÚ GENERAL */
+.menu {
+    display: flex; /* Por defecto visible en escritorio */
+    gap: 3.5rem;
+}
+
+.menu ul {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* BOTONES */
+.botones a {
+    color: var(--color-white);
+    text-decoration: none;
+    border: solid 2px var(--color-white);
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    background-color: var(--color-800);
+}
+
+/* MENÚ EN DISPOSITIVOS MÓVILES */
+.menu {
+    display: none; /* Oculto en móviles inicialmente */
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fuera de la pantalla inicialmente */
+    height: 100vh;
+    width: 70%; /* Ancho del menú móvil */
+    background-color: var(--color-600);
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out; /* Animación de entrada */
+    z-index: 1002; /* Por encima del overlay */
+}
+
+.menu.show {
+    right: 0; /* Cuando se despliega */
+}
+
+/* OPCIONES EN MENÚ MÓVIL */
+.menu ul {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu ul li a {
+    font-size: 1.2rem;
+}
+
+/* BOTÓN DE CERRAR EN MENÚ MÓVIL */
+.menu .close-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-white);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* OVERLAY PARA MÓVILES */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1001; /* Menor que el menú */
+    pointer-events: auto; /* Habilitar clics para cerrar */
+}
+
+/* BOTÓN HAMBURGER */
+.hamburger {
+    display: none; /* Ocultar en escritorio */
+    font-size: 2rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+/* ESTILOS PARA TABLETAS */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        gap: 1rem;
+        height: auto;
+    }
+
+    .menu {
+        display: none; /* Ocultar el menú en móviles y mostrar al desplegar */
+    }
+
+    .menu ul {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .botones a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ESTILOS PARA MÓVILES */
+@media (max-width: 768px) {
+    .menu-2{
+        display: none;
+    }
+    .menu {
+        display: none; /* Ocultar por defecto */
+    }
+
+    .menu.show {
+        display: flex; /* Mostrar al hacer clic en el botón */
+    }
+
+    .container {
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block; /* Mostrar el botón en móviles */
+    }
+
+    .botones {
+        display: none; /* Ocultar botones adicionales en móviles */
+    }
+}
