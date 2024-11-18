@@ -8,7 +8,7 @@
         <!-- Botón de menú (hamburger) -->
         <div class="hamburger" (click)="toggleMenu()">&#9776;</div>
         <!-- Menú desplegable -->
-        <div class="menu" [class.show]="menuVisible">
+        <div class="menu" [class.show]="menuVisible" [@menuAnimation]="menuState">
             <button class="close-button" (click)="closeMenu()">&#10005;</button>
             <ul>
                 <li><a routerLink="">Inicio</a></li>
