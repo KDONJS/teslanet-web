@@ -5,7 +5,11 @@
         <div *ngFor="let imagen of imagenes; let i = index" class="slide">
           <img [src]="imagen.url" alt="Imagen {{ i + 1 }}">
           <div class="overlay">
-            <div class="texto">{{ imagen.texto }}</div>
+            <div class="texto">
+              <h2>{{ imagen.tittle }}</h2>
+              <span>{{ imagen.mensaje }}</span>
+              <a href="">Lo quiero</a>
+            </div>
           </div>
         </div>
       </div>

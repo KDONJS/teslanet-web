@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 interface Imagen {
   url: string;
-  texto: string;
+  tittle: string;
+  mensaje: string;
 }
 
 @Component({
@@ -15,9 +16,21 @@ interface Imagen {
 })
 export class HomeComponent implements OnInit, OnDestroy{
   imagenes: Imagen[] = [
-    { url: 'assets/img/hero3.webp', texto: 'Texto para la imagen 1' },
-    { url: 'assets/img/hero2.webp', texto: 'Texto para la imagen 2' },
-    { url: 'assets/img/hero1.webp', texto: 'Texto para la imagen 3' }
+    { 
+      url: 'assets/img/hero3.webp', 
+      tittle: 'Internet para Gamers',
+      mensaje: 'Domina cada partida con nuestra conexión de baja latencia.'
+    },
+    { 
+      url: 'assets/img/hero2.webp', 
+      tittle: 'Internet para el Trabajo',
+      mensaje: 'Productividad sin límites: trabaja desde casa con nuestra conexión confiable.'
+    },
+    { 
+      url: 'assets/img/hero1.webp', 
+      tittle: 'Internet para el Hogar',
+      mensaje: 'Conexión que une a la familia: disfruta de internet en cada rincón de tu hogar.' 
+    }
   ];
   indiceActual: number = 0;
   intervaloAutoDesplazamiento: any;
