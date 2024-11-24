@@ -3,7 +3,6 @@ nav {
     display: flex;
     justify-content: center;
     position: fixed;
-    margin-top: 1rem;
     width: 100vw;
     height: 4rem;
     z-index: 1000;
@@ -13,19 +12,18 @@ nav {
 /* CONTENEDOR GENERAL */
 .container {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-600);
+    background-color: var(--color-white);
     height: auto;
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 2rem;
     transition: background-color 0.3s ease-in-out;
 }
 
 /* LOGO */
 .logo a {
-    color: var(--color-white);
+    color: var(--color-black);
     text-decoration: none;
 }
 
@@ -39,9 +37,9 @@ nav {
 }
 
 .menu-2 ul li a{
-
+    font-weight: 500;
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 /* MENÚ GENERAL */
@@ -68,10 +66,9 @@ nav {
 .botones a {
     color: var(--color-white);
     text-decoration: none;
-    border: solid 2px var(--color-white);
     padding: 0.5rem;
     border-radius: 0.7rem;
-    background-color: var(--color-800);
+    background-color: var(--color-700);
 }
 
 /* MENÚ EN DISPOSITIVOS MÓVILES */
@@ -132,14 +129,13 @@ nav {
 .hamburger {
     display: none; /* Ocultar en escritorio */
     font-size: 2rem;
-    color: var(--color-white);
+    color: var(--color-800);
     cursor: pointer;
 }
 
 /* ESTILOS PARA TABLETAS */
 @media (max-width: 1024px) {
     .container {
-        width: 80%;
         gap: 1rem;
         height: auto;
     }

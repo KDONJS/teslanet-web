@@ -2,22 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --color-50: #FFF0F0;
-    --color-100: #FFDEDE;
-    --color-200: #FFC2C2;
-    --color-300: #FF9797;
-    --color-400: #FF5B5B;
-    --color-500: #FF2929;
-    --color-600: #F90909;
-    --color-700: #D30303;
-    --color-800: #AD0707;
-    --color-900: #8F0D0D;
-    --color-950: #4E0101;
-    --color-white: #FFFFFF;
-  }  
+  --color-50: #e9f2ff;
+  --color-100: #d7e7ff;
+  --color-200: #b7d1ff;
+  --color-300: #8bb1ff;
+  --color-400: #5d83ff;
+  --color-500: #3856ff;
+  --color-600: #1624ff;
+  --color-700: #0914ec;
+  --color-800: #0e1ac5;
+  --color-900: #15209a;
+  --color-950: #0d1259;
+  --color-red: #d70000;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
 
 *{
     margin: 0%;
     padding: 0%;
     font-family: "Poppins", serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

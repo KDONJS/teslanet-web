@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit, OnDestroy{
   iniciarAutoDesplazamiento(): void {
     this.intervaloAutoDesplazamiento = setInterval(() => {
       this.siguiente();
-    }, 5000); // Cambia de imagen cada 5 segundos
+    }, 7000); // Cambia de imagen cada 5 segundos
   }
 
   detenerAutoDesplazamiento(): void {
