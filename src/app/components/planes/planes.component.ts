@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxSplideModule } from 'ngx-splide';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-planes',
   standalone: true,
   imports: [
     CommonModule,
-    NgxSplideModule
+    NgxSplideModule,
+    MatIconModule
   ],
   templateUrl: './planes.component.html',
   styleUrl: './planes.component.css'

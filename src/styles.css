@@ -56,3 +56,5 @@ html::-webkit-scrollbar {
 .separador-7{
   height: 7rem;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
