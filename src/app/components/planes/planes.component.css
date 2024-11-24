@@ -20,10 +20,25 @@ splide {
     padding: 8rem 0rem;
   }
 
+  @media (max-width: 768px) {
+    .container-plan{
+        width: 90%;
+        padding: 8rem 0rem;
+      }    
+  }
+
   .container-plan .card-plan{
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-radius: 1rem;
     border: 0.2rem solid var(--color-950);
+  }
+
+  @media (max-width: 1024px) {
+    .container-plan .card-plan{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
   }
 
   .card-plan .card-head{
