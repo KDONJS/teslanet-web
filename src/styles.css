@@ -18,11 +18,15 @@
   --color-black: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 *{
     margin: 0%;
     padding: 0%;
     font-family: "Poppins", serif;
+    transition: all 0.3s ease;
 }
 
 .material-symbols-outlined {

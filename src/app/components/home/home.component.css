@@ -116,18 +116,28 @@
         display: flex;
         gap: 0.5rem;
         flex-direction: column;
-        color: white;
+        color: var(--color-white);
         font-size: 1.5rem;
       }
     
       .texto h2{
-        font-size: 2.5rem;
+        font-size: 1.8rem;
       }
     
       .texto span{
         margin-top: -1rem;
         margin-bottom: 1rem;
+        font-size: 0.8rem;
+      }
+
+      .texto a{
+        text-decoration: none;
+        max-width: max-content;
         font-size: 1rem;
+        padding: 0.5rem 2.5rem;
+        border: solid 0.1rem var(--color-white);
+        border-radius: 0.5rem;
+        color: var(--color-white);
       }
     
   }
@@ -136,7 +146,7 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    padding: 2rem 0rem;
+    padding: 3rem 0rem;
     background-color: var(--color-50);
   }
 
@@ -170,6 +180,7 @@
   .servicio .description .veneficios ul li{
     list-style: none;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1.5rem;
     padding: 2rem;
@@ -188,6 +199,25 @@
     background-color: var(--color-50);
     font-size: 2rem;
     transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  }
+
+  @media (max-width: 1150px){
+    .servicio .description .veneficios ul li .icono{
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    .servicio .description .veneficios ul{
+      gap: 1.5rem;
+    }
+
+    .servicio .description .veneficios ul li{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
   }
 
   .servicio .description .veneficios ul li .icono:hover{
@@ -214,5 +244,14 @@
     }
     .servicio .description .veneficios ul{
       flex-direction: column;
+    }
+
+    .servicio .description h2{
+      font-size: 1.5rem;
+    }
+
+    .servicio .description p{
+      padding: 1rem;
+      font-size: 0.8rem;
     }
   }
