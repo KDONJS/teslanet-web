@@ -45,7 +45,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.336);
   display: flex;
   padding: 4rem;
   justify-content: left;
@@ -146,7 +146,6 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 3rem 0rem;
   background-color: var(--color-50);
 }
 
@@ -163,13 +162,13 @@
 
 .servicio .description h2{
   font-size: 2rem;
+  padding-top: 3rem;
   font-weight: 600;
   color: var(--color-950);
 }
 
 .servicio .description .veneficios{
   padding: 1rem;
-  margin-top: 2rem;
 }
 
 .servicio .description .veneficios ul{

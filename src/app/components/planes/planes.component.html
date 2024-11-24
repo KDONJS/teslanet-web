@@ -1,0 +1,61 @@
+<section id="planes">
+    <div class="container-plan">
+        <splide [options]="opciones">
+            <splide-slide *ngFor="let imagen of imagenes">
+              <div class="card-plan">
+                <div class="card-head" *ngIf="imagen.veneficio.instalacion else sinInstalacion">
+                    <span>{{imagen.veneficio.instalacion}}</span>
+                </div>
+                <ng-template #sinInstalacion>
+                    <div class="card-head-2">
+                        
+                      </div>
+                </ng-template>
+                
+                <div class="plan">
+                    <div class="titulo">
+                        <h2>{{imagen.plan}}</h2>
+                    </div>
+                    <div class="precio">
+                        <span>
+                            {{imagen.precio}}
+                        </span>
+                    </div>
+                    <div class="imagen">
+                        <img [src]="imagen.src" [alt]="imagen.alt">
+                    </div>
+                </div>
+                <div class="accion">
+                    <a href="">!Quiero este plan!</a>
+                </div>
+                <div class="icons-servicio">
+                    <div class="icon">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>router alta velocidad</span>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>router alta velocidad</span>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>router alta velocidad</span>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>router alta velocidad</span>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>router alta velocidad</span>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>router alta velocidad</span>
+                    </div>
+                </div>
+              </div>
+            </splide-slide>
+        </splide>  
+    </div>  
+</section>

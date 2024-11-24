@@ -1,7 +1,7 @@
 <nav>
     <div class="container">
         <div class="logo">
-            <a routerLink="">
+            <a routerLink="/home" fragment="home">
                 <span>TESLANET</span>
             </a>
         </div>
@@ -11,18 +11,18 @@
         <div class="menu" [class.show]="menuVisible" [@menuAnimation]="menuState">
             <button class="close-button" (click)="closeMenu()">&#10005;</button>
             <ul>
-                <li><a routerLink="">Inicio</a></li>
-                <li><a routerLink="">Beneficios</a></li>
-                <li><a routerLink="">Planes</a></li>
-                <li><a routerLink="">Cobertura</a></li>
+                <li><a routerLink="/home" fragment="home" (click)="closeMenu()">Inicio</a></li>
+                <li><a routerLink="" (click)="closeMenu()">Beneficios</a></li>
+                <li><a routerLink="" (click)="closeMenu()">Planes</a></li>
+                <li><a routerLink="" (click)="closeMenu()">Cobertura</a></li>
             </ul>
         </div>
         <div class="menu-2">
             <ul>
-                <li><a routerLink="">Inicio</a></li>
-                <li><a routerLink="">Beneficios</a></li>
-                <li><a routerLink="">Planes</a></li>
-                <li><a routerLink="">Cobertura</a></li>
+                <li><a routerLink="/home" fragment="home" (click)="closeMenu()">Inicio</a></li>
+                <li><a routerLink="" (click)="closeMenu()">Beneficios</a></li>
+                <li><a routerLink="" (click)="closeMenu()">Planes</a></li>
+                <li><a routerLink="" (click)="closeMenu()">Cobertura</a></li>
             </ul>
         </div>
         <!-- Overlay que cubre toda la pantalla -->
