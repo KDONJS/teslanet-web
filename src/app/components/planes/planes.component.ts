@@ -35,9 +35,9 @@ export class PlanesComponent {
         instalacion: '',
         tipo: 'internet 100% fibra optica',
       },
-      alt: 'Plan 30Mb - S/ 40',
+      alt: 'Plan 30Mb - S/40',
       plan: '30Mb',
-      precio: 'S/ 40'
+      precio: 'S/40'
     },
     {
       src: 'assets/img/router.png',
@@ -45,9 +45,9 @@ export class PlanesComponent {
         instalacion: 'recomendado',
         tipo: 'internet 100% fibra optica',
       },
-      alt: 'Plan 100Mb - S/ 50',
+      alt: 'Plan 100Mb - S/50',
       plan: '100Mb',
-      precio: 'S/ 50'
+      precio: 'S/50'
     },
     {
       src: 'assets/img/router.png',
@@ -55,29 +55,19 @@ export class PlanesComponent {
         instalacion: '',
         tipo: 'internet 100% fibra optica',
       },
-      alt: 'Plan 150Mb - S/ 60',
+      alt: 'Plan 150Mb - S/60',
       plan: '150Mb',
-      precio: 'S/ 60'
+      precio: 'S/60'
     },
     {
       src: 'assets/img/router.png',
       veneficio:{
-        instalacion: 'recomendado',
+        instalacion: '',
         tipo: 'internet 100% fibra optica',
       },
-      alt: 'Plan 200Mb - S/ 70',
+      alt: 'Plan 200Mb - S/70',
       plan: '200Mb',
-      precio: 'S/ 70'
-    },
-    {
-      src: 'assets/img/router.png',
-      veneficio:{
-        instalacion: '',
-        tipo: 'internet 100% fibra optica',
-      },
-      alt: 'Plan 250Mb - S/ 80',
-      plan: '250Mb',
-      precio: 'S/ 80'
+      precio: 'S/70'
     },
     {
       src: 'assets/img/router.png',
@@ -85,9 +75,9 @@ export class PlanesComponent {
         instalacion: 'recomendado',
         tipo: 'internet 100% fibra optica',
       },
-      alt: 'Plan 300Mb - S/ 90',
-      plan: '300Mb',
-      precio: 'S/ 90'
+      alt: 'Plan 250Mb - S/80',
+      plan: '250Mb',
+      precio: 'S/80'
     },
     {
       src: 'assets/img/router.png',
@@ -95,9 +85,19 @@ export class PlanesComponent {
         instalacion: '',
         tipo: 'internet 100% fibra optica',
       },
-      alt: 'Plan 350Mb - S/ 100',
+      alt: 'Plan 300Mb - S/90',
+      plan: '300Mb',
+      precio: 'S/90'
+    },
+    {
+      src: 'assets/img/router.png',
+      veneficio:{
+        instalacion: 'recomendado',
+        tipo: 'internet 100% fibra optica',
+      },
+      alt: 'Plan 350Mb - S/100',
       plan: '350Mb',
-      precio: 'S/ 100'
+      precio: 'S/100'
     }
   ];
   

@@ -4,6 +4,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlanesComponent } from './components/planes/planes.component';
+import { BeneficiosComponent } from './components/beneficios/beneficios.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { PlanesComponent } from './components/planes/planes.component';
     NavComponent,
     HomeComponent,
     FooterComponent,
-    PlanesComponent
+    PlanesComponent,
+    BeneficiosComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -1,5 +1,9 @@
 <section id="planes">
     <div class="container-plan">
+        <div class="planes-head">
+            <h1>Internet Fibra Óptica</h1>
+            <span>¡Disfruta la mejor experiencia de navegación!</span>
+        </div>
         <splide [options]="opciones">
             <splide-slide *ngFor="let imagen of imagenes">
               <div class="card-plan">
@@ -21,7 +25,7 @@
                     </div>
                     <div class="precio">
                         <span>
-                            {{imagen.precio}}
+                            {{imagen.precio}}<span class="small-text">.0</span>
                         </span>
                     </div>
                     <div class="imagen">

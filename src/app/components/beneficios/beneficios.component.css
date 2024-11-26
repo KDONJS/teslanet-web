@@ -1,0 +1,110 @@
+
+.container-service{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-50);
+  }
+  
+  .servicio{
+    display: flex;
+    width: 90rem;
+  }
+  
+  .servicio .description{
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  .servicio .description h2{
+    font-size: 2rem;
+    padding-top: 3rem;
+    font-weight: 600;
+    color: var(--color-950);
+  }
+  
+  .servicio .description .veneficios{
+    padding: 1rem;
+  }
+  
+  .servicio .description .veneficios ul{
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .servicio .description .veneficios ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+  }
+  
+  .servicio .description .veneficios ul li .icono{
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-900);
+    background-color: var(--color-50);
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  @media (max-width: 1150px){
+    .servicio .description .veneficios ul li .icono{
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+    .servicio .description .veneficios ul{
+      gap: 1.5rem;
+    }
+  
+    .servicio .description .veneficios ul li{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+  }
+  
+  .servicio .description .veneficios ul li .icono:hover{
+    color: var(--color-red);
+    transform: scale(1.2) rotate(10deg);
+  }
+  
+  .servicio .description .veneficios ul li .veneficio{
+    width: 80%;
+  }
+  
+  .servicio .description .veneficios h3{
+    font-weight: 600;
+  }
+  
+  .servicio .description .veneficios p{
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 768px) {
+    .servicio .description .veneficios ul{
+      flex-direction: column;
+    }
+  
+    .servicio .description h2{
+      font-size: 1.5rem;
+    }
+  
+    .servicio .description p{
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+  }
