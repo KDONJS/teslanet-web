@@ -109,38 +109,39 @@ export class CoverturaComponent implements AfterViewInit{
   ];
 
   private initMap(): void {
+    // Sobrescribir las rutas de los íconos predeterminados
+    delete (L.Icon.Default.prototype as any)._getIconUrl;
+    L.Icon.Default.mergeOptions({
+      iconUrl: 'assets/leaflet/images/marker.svg',
+    });
+
     this.map = L.map('map', {
       center: [-12.192, -76.929],
       zoom: 14,
       scrollWheelZoom: true,
     });
-  
-    // Agregar capa base
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 16,
       minZoom: 12,
     }).addTo(this.map);
-  
-    // Asegurarnos de que las coordenadas son del tipo correcto
+
     const formattedCoords: L.LatLngTuple[] = this.customRegionCoords.map(
-      (coord) => [coord[0], coord[1]] as L.LatLngTuple // Convertir explícitamente a LatLngTuple
+      (coord) => [coord[0], coord[1]] as L.LatLngTuple
     );
-  
-    // Crear el polígono
+
     const customRegion = L.polygon(formattedCoords, {
       color: 'blue',
       fillColor: '#30a3e6',
       fillOpacity: 0.3,
     }).addTo(this.map).bindPopup('Cobertura TESLANET');
-  
-    // Restringir el área visible a los límites del polígono
+
     this.map.setMaxBounds(customRegion.getBounds());
-  
-    // Agregar puntos de cobertura
+
     const puntosCobertura = [
       { coords: [-12.192, -76.929] as L.LatLngTuple, texto: 'San Francisco de Tablada de Lurin' },
     ];
-  
+
     puntosCobertura.forEach((punto) => {
       L.marker(punto.coords)
         .addTo(this.map)
