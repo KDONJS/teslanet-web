@@ -112,7 +112,7 @@ export class CoverturaComponent implements AfterViewInit{
     this.map = L.map('map', {
       center: [-12.192, -76.929],
       zoom: 14,
-      scrollWheelZoom: false,
+      scrollWheelZoom: true,
     });
   
     // Agregar capa base
