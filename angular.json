@@ -26,12 +26,14 @@
             ],
             "styles": [
               "src/custom-theme.scss",
+              "node_modules/leaflet/dist/leaflet.css",
               "node_modules/@splidejs/splide/dist/css/splide.min.css",
               "node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/@splidejs/splide/dist/js/splide.min.js"
+              "node_modules/@splidejs/splide/dist/js/splide.min.js",
+              "node_modules/leaflet/dist/leaflet.js"
             ]
           },
           "configurations": {

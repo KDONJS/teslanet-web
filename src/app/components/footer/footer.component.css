@@ -1,0 +1,113 @@
+.footer {
+    background-color: var(--color-800);
+    color: var(--color-50);
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-contact,
+  .footer-social,
+  .footer-logo {
+    flex: 1 1 calc(33.333% - 40px);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .footer-title {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--color-200);
+    margin-bottom: 10px;
+  }
+
+  .footer-link {
+    color: var(--color-100);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: var(--color-50);
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-link {
+    margin: 0 8px;
+    text-decoration: none;
+    color: var(--color-300);
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: var(--color-50);
+  }
+
+  .logo-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .footer-divider {
+    border: 0;
+    border-top: 1px solid var(--color-700);
+    margin: 30px 0;
+  }
+
+  .footer-copyright {
+    font-size: 0.9em;
+    color: var(--color-100);
+  }
+
+  @media (max-width: 1024px) {
+    .footer-flex {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-contact,
+    .footer-social,
+    .footer-logo {
+      flex: 1 1 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-flex {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+    .footer-contact,
+    .footer-social,
+    .footer-logo {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    .footer-container {
+      padding: 0 10px;
+    }
+  }

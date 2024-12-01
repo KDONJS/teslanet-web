@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlanesComponent } from './components/planes/planes.component';
 import { BeneficiosComponent } from './components/beneficios/beneficios.component';
+import { CoverturaComponent } from './components/covertura/covertura.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { BeneficiosComponent } from './components/beneficios/beneficios.componen
     HomeComponent,
     FooterComponent,
     PlanesComponent,
-    BeneficiosComponent
+    BeneficiosComponent,
+    CoverturaComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

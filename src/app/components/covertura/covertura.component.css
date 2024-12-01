@@ -1,0 +1,16 @@
+.container-cobertura{
+}
+
+.container-cobertura .container-map{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#map {
+  border: solid 2px var(--color-800);
+  height: 30rem;
+  width: 85%;
+}
