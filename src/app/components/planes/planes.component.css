@@ -97,12 +97,13 @@ splide {
       font-weight: 500;
       font-size: 2rem;
       color: var(--color-800);
+      text-align: center;
     }
   
     .container-plan .planes-head span{
       color: var(--color-red);
+      text-align: center;
     }
-  
   }
 
   .card-plan .plan .imagen{
