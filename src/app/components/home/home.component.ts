@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface Imagen {
   url: string;
@@ -36,8 +37,21 @@ export class HomeComponent implements OnInit, OnDestroy{
   indiceActual: number = 0;
   intervaloAutoDesplazamiento: any;
 
+  constructor(private route: ActivatedRoute, private router: Router){}
+
   ngOnInit(): void {
     this.iniciarAutoDesplazamiento();
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        // Limpiar el fragmento actual antes de volver a navegar
+        this.router.navigate([], { fragment: undefined, replaceUrl: true }).then(() => {
+          const element = document.getElementById(fragment);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
   }
 
   ngOnDestroy(): void {
