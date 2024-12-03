@@ -27,6 +27,11 @@ nav {
     text-decoration: none;
 }
 
+.logo a .img-logo{
+    width:15rem ;
+    filter: drop-shadow(0rem 0rem 0.3rem var(--color-100));
+}
+
 .menu-2 ul{
     display: flex;
     gap: 3.5rem;
