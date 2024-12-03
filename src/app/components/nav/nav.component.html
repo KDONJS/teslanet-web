@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo">
             <a routerLink="/home" fragment="home">
-                <img class="img-logo" src="assets/svg/logo.svg" alt="">
+                <img class="img-logo" src="assets/svg/footer.svg" alt="">
             </a>
         </div>
         <!-- Botón de menú (hamburger) -->
@@ -11,11 +11,14 @@
         <div class="menu" [class.show]="menuVisible" [@menuAnimation]="menuState">
             <button class="close-button" (click)="closeMenu()">&#10005;</button>
             <ul>
-                <li><a routerLink="/home" fragment="home" (click)="closeMenu()">Inicio</a></li>
-                <li><a routerLink="" (click)="closeMenu()">Planes</a></li>
-                <li><a routerLink="" (click)="closeMenu()">Beneficios</a></li>
-                <li><a routerLink="" (click)="closeMenu()">Cobertura</a></li>
+                <li><a routerLink="/home" fragment="home" (click)="closeMenu()"> <span>Inicio</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+                <li><a routerLink="" (click)="closeMenu()"> <span>Planes</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+                <li><a routerLink="" (click)="closeMenu()"> <span>Beneficios</span> <i class="fa-solid fa-arrow-right"></i></a></li>
+                <li><a routerLink="" (click)="closeMenu()"> <span>Cobertura</span> <i class="fa-solid fa-arrow-right"></i></a></li>
             </ul>
+            <div class="accion">
+                <a href="">Contáctanos</a>
+            </div>
         </div>
         <div class="menu-2">
             <ul>

@@ -28,7 +28,7 @@ nav {
 }
 
 .logo a .img-logo{
-    width:15rem ;
+    width:10rem ;
     filter: drop-shadow(0rem 0rem 0.3rem var(--color-100));
 }
 
@@ -86,7 +86,6 @@ nav {
     width: 70%; /* Ancho del menú móvil */
     background-color: var(--color-600);
     flex-direction: column;
-    align-items: start;
     padding: 2rem;
     transition: all 0.3s ease-in-out;
     z-index: 1002; /* Por encima del overlay */
@@ -154,8 +153,17 @@ nav {
     }
 
     .menu ul {
-        gap: 1rem;
-        align-items: center;
+        gap: 2rem;
+    }
+
+    .menu ul li{
+        padding: 0.5rem;
+        border-bottom:  1px solid var(--color-300);
+    }
+
+    .menu ul li a{
+        display: flex;
+        justify-content: space-between;
     }
 
     .botones a {
@@ -189,5 +197,19 @@ nav {
 
     .botones {
         display: none; /* Ocultar botones adicionales en móviles */
+    }
+
+    .accion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .accion a {
+        background: var(--color-red);
+        padding: 1rem 3rem;
+        border-radius: 0.5rem;
+        color: var(--color-white);
+        text-decoration: none;
     }
 }
