@@ -44,7 +44,7 @@ splide {
   .container-plan .card-plan{
     margin: 1rem;
     border-radius: 1rem;
-    /* border: 0.2rem solid var(--color-950); */
+    border: 0.2rem solid var(--color-950);
     -webkit-box-shadow: 0px 0px 5px 0.5px rgba(120, 120, 120, 0.281);
     -moz-box-shadow: 0px 0px 5px 0.5px rgba(120, 120, 120, 0.281);
     box-shadow: 0px 0px 5px 0.5px rgba(120, 120, 120, 0.281);
