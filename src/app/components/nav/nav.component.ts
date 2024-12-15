@@ -47,5 +47,4 @@ export class NavComponent {
   closeMenu() {
     this.menuVisible = false;
   }
-
 }

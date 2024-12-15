@@ -1,0 +1,95 @@
+section {
+    max-width: 80rem;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  section h2{
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--color-800);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  details {
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  details summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 2rem 1.5rem;
+    color: var(--color-950);
+    border: 0.15rem solid var(--color-950);
+    border-radius: 0.5rem;
+    user-select: none;
+    outline: none;
+    font-weight: 500;
+  }
+
+  details summary:hover {
+    background-color: var(--color-50);
+  }
+
+  details[open] summary {
+    background-color: var(--color-50);
+  }
+
+  details .body-details{
+    padding: 1.5rem;
+  }
+
+  .pagos{
+    display: flex;
+  }
+
+  .pagos img {
+    width: 50%;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    border-right: 0.15rem solid var(--color-950);
+  }
+
+  a {
+    color: var(--color-600);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: var(--color-800);
+    text-decoration: underline;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    details summary {
+      font-size: 1rem;
+    }
+
+    .pagos{
+      display: flex;
+      gap: 1.5rem;
+      flex-direction: column;
+    }
+
+    .pagos img {
+      width: 100%;
+    }
+    
+
+    details p,
+    details ul {
+      font-size: 0.9rem;
+      border-right: none;
+    }
+  }
