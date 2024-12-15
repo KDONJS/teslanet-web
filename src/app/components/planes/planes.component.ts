@@ -100,5 +100,13 @@ export class PlanesComponent {
       precio: 'S/100'
     }
   ];
+
+  numeroWhatsApp = '51964875184';
+
+  generarUrlWhatsApp(plan: string, precio: string): string {
+    const mensaje = `¡Hola! Estoy interesado en el plan ${plan} que cuesta ${precio}. ¿Podrían proporcionarme más información y los pasos para contratarlo? ¡Gracias!`;
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    return `https://wa.me/${this.numeroWhatsApp}?text=${mensajeCodificado}`;
+  }
   
 }

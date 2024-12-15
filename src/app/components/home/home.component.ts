@@ -17,6 +17,8 @@ interface Imagen {
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy{
+  urlWatssapp = 'https://wa.me/51964875184'
+  textWatsapp = '?text=%C2%A1Hola%21%20%20Me%20gustar%C3%ADa%20conocer%20los%20planes%20que%20ofrece%20Red%20TeslaNet.%20%C2%BFPodr%C3%ADan%20proporcionarme%20m%C3%A1s%20informaci%C3%B3n%3F'
   imagenes: Imagen[] = [
     { 
       url: 'assets/img/hero3.webp', 

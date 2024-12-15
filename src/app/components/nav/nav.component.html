@@ -17,7 +17,7 @@
                 <li><a routerLink="cobertura" fragment="cobertura" (click)="closeMenu()"> <span>Cobertura</span> <i class="fa-solid fa-arrow-right"></i></a></li>
             </ul>
             <div class="accion">
-                <a href="">Contáctanos</a>
+                <a [href]="urlWatssapp+textWatsapp" target="_blank">Contáctanos</a>
             </div>
         </div>
         <div class="menu-2">
@@ -31,7 +31,7 @@
         <!-- Overlay que cubre toda la pantalla -->
         <div class="overlay" *ngIf="menuVisible" (click)="closeMenu()"></div>
         <div class="botones">
-            <a href="">Contáctanos</a>
+            <a [href]="urlWatssapp+textWatsapp" target="_blank">Contáctanos</a>
         </div>
     </div>
 </nav>
