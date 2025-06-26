@@ -1,6 +1,5 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
 import * as L from 'leaflet';
-import * as d3 from 'd3';
 
 @Component({
   selector: 'app-covertura',
@@ -10,7 +9,7 @@ import * as d3 from 'd3';
   styleUrl: './covertura.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CoverturaComponent implements AfterViewInit{
+export class CoverturaComponent implements AfterViewInit, OnDestroy{
   private map!: L.Map;
 
   private customRegionCoords: L.LatLngTuple[] = [
@@ -119,8 +118,6 @@ export class CoverturaComponent implements AfterViewInit{
     });
 
     this.map = L.map('map', {
-      center: [-12.192, -76.929],
-      zoom: 14,
       scrollWheelZoom: true,
     });
 
@@ -139,7 +136,9 @@ export class CoverturaComponent implements AfterViewInit{
       fillOpacity: 0.3,
     }).addTo(this.map).bindPopup('Cobertura TESLANET');
 
-    this.map.setMaxBounds(customRegion.getBounds());
+    const bounds = customRegion.getBounds();
+    this.map.fitBounds(bounds);
+    this.map.setMaxBounds(bounds);
 
     const puntosCobertura = [
       { coords: [-12.192, -76.929] as L.LatLngTuple, texto: 'San Francisco de Tablada de Lurin' },
@@ -154,5 +153,11 @@ export class CoverturaComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     this.initMap();
+  }
+
+  ngOnDestroy(): void {
+    if (this.map) {
+      this.map.remove();
+    }
   }
 }

@@ -10,7 +10,7 @@ Este proyecto contiene varios componentes de Angular utilizados para construir l
 ## NavComponent
 
 - **Ubicación:** `src/app/components/nav/nav.component.ts`
-- **Descripción:** Barra de navegación principal. Implementa un menú responsive con animaciones para mostrar u ocultar las opciones. Incluye enlaces a las distintas secciones y un botón de contacto por WhatsApp.
+- **Descripción:** Barra de navegación principal. Centra el logo y el menú en pantallas grandes, implementa un menú responsive con animaciones para mostrar u ocultar las opciones e incluye un enlace de contacto por WhatsApp.
 
 ## HomeComponent
 
@@ -30,7 +30,7 @@ Este proyecto contiene varios componentes de Angular utilizados para construir l
 ## CoverturaComponent
 
 - **Ubicación:** `src/app/components/covertura/covertura.component.ts`
-- **Descripción:** Utiliza Leaflet y D3 para mostrar un mapa con la zona de cobertura de Teslanet. Al inicializarse, dibuja una región personalizada y marca puntos de interés.
+- **Descripción:** Utiliza Leaflet para mostrar un mapa con la zona de cobertura de Teslanet. Ajusta el zoom a la región delimitada, marca puntos de interés y libera la instancia del mapa al destruirse el componente.
 
 ## FooterComponent
 
