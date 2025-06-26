@@ -66,10 +66,17 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   siguiente(): void {
     this.indiceActual = (this.indiceActual + 1) % this.imagenes.length;
+    this.resetAutoDesplazamiento();
   }
 
   anterior(): void {
     this.indiceActual = (this.indiceActual - 1 + this.imagenes.length) % this.imagenes.length;
+    this.resetAutoDesplazamiento();
+  }
+
+  goToSlide(indice: number): void {
+    this.indiceActual = indice;
+    this.resetAutoDesplazamiento();
   }
 
   iniciarAutoDesplazamiento(): void {
@@ -82,5 +89,10 @@ export class HomeComponent implements OnInit, OnDestroy{
     if (this.intervaloAutoDesplazamiento) {
       clearInterval(this.intervaloAutoDesplazamiento);
     }
+  }
+
+  private resetAutoDesplazamiento(): void {
+    this.detenerAutoDesplazamiento();
+    this.iniciarAutoDesplazamiento();
   }
 }

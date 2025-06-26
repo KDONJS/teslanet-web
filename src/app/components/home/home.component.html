@@ -16,6 +16,14 @@
         </div>
         <button class="prev" (click)="anterior()">&#10094;</button>
         <button class="next" (click)="siguiente()">&#10095;</button>
+        <div class="indicators">
+          <span
+            *ngFor="let imagen of imagenes; let i = index"
+            class="dot"
+            [class.active]="i === indiceActual"
+            (click)="goToSlide(i)"
+          ></span>
+        </div>
       </div>
     </div>
   </div>
