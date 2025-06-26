@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxSplideModule } from 'ngx-splide';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,19 +12,21 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   templateUrl: './planes.component.html',
-  styleUrl: './planes.component.css'
+  styleUrl: './planes.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PlanesComponent {
   opciones = {
+    type: 'loop',
     perPage: 3,
     perMove: 1,
+    autoplay: true,
+    interval: 5000,
+    pauseOnHover: true,
+    gap: '1rem',
     breakpoints: {
-      1024: {
-        perPage: 2,
-      },
-      768: {
-        perPage: 1,
-      }
+      1024: { perPage: 2 },
+      768: { perPage: 1 }
     }
   };
 
@@ -100,6 +102,10 @@ export class PlanesComponent {
       precio: 'S/100'
     }
   ];
+
+  trackByIndex(index: number) {
+    return index;
+  }
 
   numeroWhatsApp = '51964875184';
 
