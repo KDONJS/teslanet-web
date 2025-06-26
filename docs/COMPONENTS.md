@@ -10,7 +10,7 @@ Este proyecto contiene varios componentes de Angular utilizados para construir l
 ## NavComponent
 
 - **Ubicación:** `src/app/components/nav/nav.component.ts`
-- **Descripción:** Barra de navegación principal. Implementa un menú responsive con animaciones para mostrar u ocultar las opciones. Incluye enlaces a las distintas secciones y un botón de contacto por WhatsApp.
+- **Descripción:** Barra de navegación principal. Centra el logo y el menú en pantallas grandes, implementa un menú responsive con animaciones para mostrar u ocultar las opciones e incluye un enlace de contacto por WhatsApp.
 
 ## HomeComponent
 
