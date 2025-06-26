@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit} from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core';
 import * as L from 'leaflet';
 import * as d3 from 'd3';
 
@@ -7,7 +7,8 @@ import * as d3 from 'd3';
   standalone: true,
   imports: [],
   templateUrl: './covertura.component.html',
-  styleUrl: './covertura.component.css'
+  styleUrl: './covertura.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoverturaComponent implements AfterViewInit{
   private map!: L.Map;
@@ -113,6 +114,8 @@ export class CoverturaComponent implements AfterViewInit{
     delete (L.Icon.Default.prototype as any)._getIconUrl;
     L.Icon.Default.mergeOptions({
       iconUrl: 'assets/leaflet/images/marker.svg',
+      iconRetinaUrl: 'assets/leaflet/images/marker.svg',
+      shadowUrl: 'assets/leaflet/images/marker.svg',
     });
 
     this.map = L.map('map', {
