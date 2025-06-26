@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo">
             <a routerLink="/home" fragment="home">
-                <img class="img-logo" src="assets/svg/footer.svg" alt="">
+                <img class="img-logo" src="assets/svg/footer.svg" alt="Teslanet" loading="lazy" decoding="async">
             </a>
         </div>
         <!-- Botón de menú (hamburger) -->
@@ -17,7 +17,7 @@
                 <li><a routerLink="cobertura" fragment="cobertura" (click)="closeMenu()"> <span>Cobertura</span> <i class="fa-solid fa-arrow-right"></i></a></li>
             </ul>
             <div class="accion">
-                <a [href]="urlWatssapp+textWatsapp" target="_blank">Contáctanos</a>
+                <a [href]="urlWatssapp+textWatsapp" target="_blank" rel="noopener noreferrer">Contáctanos</a>
             </div>
         </div>
         <div class="menu-2">
@@ -31,7 +31,7 @@
         <!-- Overlay que cubre toda la pantalla -->
         <div class="overlay" *ngIf="menuVisible" (click)="closeMenu()"></div>
         <div class="botones">
-            <a [href]="urlWatssapp+textWatsapp" target="_blank">Contáctanos</a>
+            <a [href]="urlWatssapp+textWatsapp" target="_blank" rel="noopener noreferrer">Contáctanos</a>
         </div>
     </div>
 </nav>

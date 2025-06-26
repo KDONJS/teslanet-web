@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -13,6 +13,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('menuAnimation', [
       state('closed', style({

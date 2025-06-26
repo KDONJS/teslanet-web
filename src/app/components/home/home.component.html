@@ -3,13 +3,13 @@
     <div class="hero">
       <div class="carrusel">
         <div class="slides" [style.transform]="getTransform()">
-          <div *ngFor="let imagen of imagenes; let i = index" class="slide">
-            <img [src]="imagen.url" alt="Imagen {{ i + 1 }}">
+          <div *ngFor="let imagen of imagenes; let i = index; trackBy: trackByIndex" class="slide">
+            <img [src]="imagen.url" alt="Imagen {{ i + 1 }}" loading="lazy" decoding="async">
             <div class="overlay">
               <div class="texto">
                 <h2>{{ imagen.tittle }}</h2>
                 <span>{{ imagen.mensaje }}</span>
-                <a [href]="urlWatssapp+textWatsapp" target="_blank">Lo quiero</a>
+                <a [href]="urlWatssapp+textWatsapp" target="_blank" rel="noopener noreferrer">Lo quiero</a>
               </div>
             </div>
           </div>
@@ -18,7 +18,7 @@
         <button class="next" (click)="siguiente()">&#10095;</button>
         <div class="indicators">
           <span
-            *ngFor="let imagen of imagenes; let i = index"
+            *ngFor="let imagen of imagenes; let i = index; trackBy: trackByIndex"
             class="dot"
             [class.active]="i === indiceActual"
             (click)="goToSlide(i)"

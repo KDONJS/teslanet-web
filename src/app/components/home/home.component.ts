@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -14,7 +14,8 @@ interface Imagen {
   standalone: true,
   imports: [CommonModule, MatIconModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit, OnDestroy{
   urlWatssapp = 'https://wa.me/51964875184'
@@ -38,6 +39,10 @@ export class HomeComponent implements OnInit, OnDestroy{
   ];
   indiceActual: number = 0;
   intervaloAutoDesplazamiento: any;
+
+  trackByIndex(index: number) {
+    return index;
+  }
 
   constructor(private route: ActivatedRoute, private router: Router){}
 

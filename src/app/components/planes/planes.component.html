@@ -5,7 +5,7 @@
             <span>¡Disfruta la mejor experiencia de navegación!</span>
         </div>
         <splide [options]="opciones">
-            <splide-slide *ngFor="let imagen of imagenes">
+            <splide-slide *ngFor="let imagen of imagenes; trackBy: trackByIndex">
               <div class="card-plan" [class.recommended]="imagen.veneficio.instalacion">
                 <div class="card-head" *ngIf="imagen.veneficio.instalacion else sinInstalacion">
                     <span>{{imagen.veneficio.instalacion}}</span>
@@ -29,7 +29,7 @@
                         </span>
                     </div>
                     <div class="imagen">
-                        <img [src]="imagen.src" [alt]="imagen.alt">
+                        <img [src]="imagen.src" [alt]="imagen.alt" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="accion">
