@@ -35,7 +35,7 @@ Este proyecto contiene varios componentes de Angular utilizados para construir l
 ## FooterComponent
 
 - **Ubicación:** `src/app/components/footer/footer.component.ts`
-- **Descripción:** Pie de página con información de contacto, enlaces a redes sociales y copyright.
+- **Descripción:** Pie de página que organiza el contacto, las redes sociales y el logotipo en una cuadrícula responsive para facilitar la lectura.
 
 ## FrecuentesComponent
 
