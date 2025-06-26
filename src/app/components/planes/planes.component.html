@@ -6,7 +6,7 @@
         </div>
         <splide [options]="opciones">
             <splide-slide *ngFor="let imagen of imagenes">
-              <div class="card-plan">
+              <div class="card-plan" [class.recommended]="imagen.veneficio.instalacion">
                 <div class="card-head" *ngIf="imagen.veneficio.instalacion else sinInstalacion">
                     <span>{{imagen.veneficio.instalacion}}</span>
                 </div>

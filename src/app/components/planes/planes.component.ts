@@ -16,15 +16,16 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class PlanesComponent {
   opciones = {
+    type: 'loop',
     perPage: 3,
     perMove: 1,
+    autoplay: true,
+    interval: 5000,
+    pauseOnHover: true,
+    gap: '1rem',
     breakpoints: {
-      1024: {
-        perPage: 2,
-      },
-      768: {
-        perPage: 1,
-      }
+      1024: { perPage: 2 },
+      768: { perPage: 1 }
     }
   };
 
