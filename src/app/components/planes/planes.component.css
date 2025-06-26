@@ -155,6 +155,47 @@ splide {
     color: var(--color-800);
   }
 
+/* Splide navigation styling */
+.splide__arrow {
+  background-color: var(--color-800);
+  color: var(--color-white);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.splide__arrow:hover {
+  background-color: var(--color-red);
+}
+
+.splide__pagination {
+  bottom: -1.5rem;
+}
+
+.splide__pagination__page {
+  background-color: var(--color-100);
+  opacity: 1;
+}
+
+.splide__pagination__page.is-active {
+  background-color: var(--color-800);
+}
+
+.card-plan.recommended {
+  border-color: var(--color-red);
+  box-shadow: 0 0 10px rgba(215, 0, 0, 0.4);
+}
+
+.card-plan {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
   .icons-servicio {
     padding: 1rem;
     display: grid;
