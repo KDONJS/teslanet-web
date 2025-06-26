@@ -20,7 +20,7 @@ Este proyecto contiene varios componentes de Angular utilizados para construir l
 ## PlanesComponent
 
 - **Ubicación:** `src/app/components/planes/planes.component.ts`
-- **Descripción:** Muestra los planes de Internet disponibles mediante un carrusel de tarjetas con detalles de velocidad y precio. También genera un enlace dinámico a WhatsApp para solicitar cada plan.
+- **Descripción:** Muestra los planes de Internet en un carrusel automático con indicadores y flechas de navegación. Las tarjetas resaltan el plan recomendado y generan un enlace dinámico a WhatsApp para solicitar más información.
 
 ## BeneficiosComponent
 
