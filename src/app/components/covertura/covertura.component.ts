@@ -1,7 +1,8 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, ElementRef, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
-import mapboxgl, { Map, Marker, Popup } from 'mapbox-gl';
+// Remover la importación estática de mapbox-gl
+// import mapboxgl, { Map, Marker, Popup } from 'mapbox-gl';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -14,7 +15,8 @@ import { environment } from '../../../environments/environment';
 })
 export class CoverturaComponent implements AfterViewInit, OnDestroy {
   @ViewChild('map', { static: false }) mapEl!: ElementRef<HTMLDivElement>;
-  private map!: Map;
+  private map: any; // Cambiar tipo a any para manejar la carga dinámica
+  private mapboxgl: any; // Almacenar la referencia de mapbox-gl
 
   // Estilos de mapa disponibles
   public mapStyles = [
@@ -124,14 +126,26 @@ export class CoverturaComponent implements AfterViewInit, OnDestroy {
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    mapboxgl.accessToken = environment.mapboxToken;
+    // Remover la asignación estática del token
+    // mapboxgl.accessToken = environment.mapboxToken;
   }
 
-  private initMap(): void {
+  async ngAfterViewInit(): Promise<void> {
     // Evita errores con Angular Universal (SSR)
     if (!isPlatformBrowser(this.platformId)) return;
 
-    this.map = new mapboxgl.Map({
+    // 👉 Carga perezosa de Mapbox GL JS
+    const m = await import('mapbox-gl');
+    this.mapboxgl = (m as any).default ?? m;
+    
+    // Configurar el token después de la carga dinámica
+    this.mapboxgl.accessToken = environment.mapboxToken;
+    
+    this.initMap();
+  }
+
+  private initMap(): void {
+    this.map = new this.mapboxgl.Map({
       container: this.mapEl.nativeElement,
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [-76.929, -12.192],
@@ -149,13 +163,13 @@ export class CoverturaComponent implements AfterViewInit, OnDestroy {
     });
 
     // Controles de navegación mejorados
-    this.map.addControl(new mapboxgl.NavigationControl({
+    this.map.addControl(new this.mapboxgl.NavigationControl({
       showCompass: false, // Ocultar brújula ya que desactivamos rotación
       showZoom: true,
       visualizePitch: false
     }), 'top-right');
     
-    this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
+    this.map.addControl(new this.mapboxgl.FullscreenControl(), 'top-right');
 
     // Agregar el polígono de cobertura cuando el mapa se carga
     this.map.on('load', () => {
@@ -164,12 +178,12 @@ export class CoverturaComponent implements AfterViewInit, OnDestroy {
     });
 
     // Agregar marcador de punto de cobertura
-    const popup = new Popup({
+    const popup = new this.mapboxgl.Popup({
       closeOnClick: false,
       closeButton: true
     }).setHTML('<b>San Francisco de Tablada de Lurin</b><br/>Cobertura TESLANET');
     
-    new Marker({
+    new this.mapboxgl.Marker({
       color: '#3856ff'
     }).setLngLat([-76.929, -12.192]).setPopup(popup).addTo(this.map);
   }
@@ -209,7 +223,7 @@ export class CoverturaComponent implements AfterViewInit, OnDestroy {
   }
 
   private fitToCoverage(): void {
-    const bounds = new mapboxgl.LngLatBounds();
+    const bounds = new this.mapboxgl.LngLatBounds();
     this.customRegionCoords.forEach(coord => bounds.extend(coord));
     this.map.fitBounds(bounds, { 
       padding: 80,
@@ -250,10 +264,6 @@ export class CoverturaComponent implements AfterViewInit, OnDestroy {
   public centerOnCoverage(): void {
     if (!this.map || !isPlatformBrowser(this.platformId)) return;
     this.fitToCoverage();
-  }
-
-  ngAfterViewInit(): void {
-    this.initMap();
   }
 
   ngOnDestroy(): void {
