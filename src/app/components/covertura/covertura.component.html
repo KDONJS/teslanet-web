@@ -2,8 +2,22 @@
   <div class="container-cobertura">
     <h2 class="coverage-title">Cobertura de Internet Teslanet</h2>
     <p class="coverage-description">Verifica si tenemos cobertura en tu área y disfruta del mejor internet de fibra óptica.</p>
+    
+    <!-- Controles del mapa -->
+    <div class="map-controls">
+      <div class="style-selector">
+        <label for="mapStyle">Estilo de mapa:</label>
+        <select id="mapStyle" [value]="currentStyle" (change)="changeMapStyle($event)">
+          <option *ngFor="let style of mapStyles" [value]="style.id">{{style.name}}</option>
+        </select>
+      </div>
+      <button class="center-btn" (click)="centerOnCoverage()" title="Centrar en zona de cobertura">
+        📍 Centrar
+      </button>
+    </div>
+    
     <div class="container-map">
-      <div id="map"></div>
+      <div #map id="map"></div>
     </div>
   </div>
 </section>

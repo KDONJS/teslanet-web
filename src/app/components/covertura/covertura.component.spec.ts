@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PLATFORM_ID } from '@angular/core';
 
 import { CoverturaComponent } from './covertura.component';
 
@@ -8,7 +9,10 @@ describe('CoverturaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CoverturaComponent]
+      imports: [CoverturaComponent],
+      providers: [
+        { provide: PLATFORM_ID, useValue: 'browser' }
+      ]
     })
     .compileComponents();
     
